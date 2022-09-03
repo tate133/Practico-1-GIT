@@ -6,6 +6,16 @@ const countries = require('./countries.json');
  */
 function getCountryByIso3(isoCode){
     //Complete with your code
+    //search in countries
+    countries.find(object =>{
+        //if there is equality we assign to result
+        if(object.iso3 === isoCode){
+            result = object;
+        }
+    });
+
+    //return the object
+    return result;
 }
 
 /**
