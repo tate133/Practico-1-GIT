@@ -6,6 +6,7 @@ const countries = require('./countries.json');
  */
 function getCountryByIso3(isoCode){
     //Complete with your code
+    let result;
     //search in countries
     countries.find(object =>{
         //if there is equality we assign to result
@@ -33,6 +34,19 @@ function getCountryTranslatedName(isoCode, language){
  */
 function getCountriesBySubregion(subregion){
     //Complete with your code
+    let result = [];
+    let i = 0;
+    //search in countries
+    countries.find(object =>{
+        //if there is equality we assign to result
+        if(object.subregion === subregion){
+            result[i] = object.name;
+            i++;
+        }
+    });
+
+    //return the array
+    return result;
 }
 
 function main() {
